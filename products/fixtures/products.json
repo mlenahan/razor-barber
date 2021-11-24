@@ -1,0 +1,13 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "name":"RUGER Essential 50ml",
+          "description":"Essential is for male or female use on wet or dry hair to style or pre-style through blow drying. Great hold with a soft natural look. Water based matte clay with a soft masculine scent.",
+          "price":8.00,
+          "is_service": false,
+          "image":"ruger_essential-50ml.jpg"
+       }
+    }
+]
