@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-def index(request):
-    """ A view to return the index page """
+def view_bag(request):
 
-    return render(request, 'home/index.html')
+    return render(request, 'bag/bag.html')
