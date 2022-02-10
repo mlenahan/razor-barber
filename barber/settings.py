@@ -168,7 +168,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu31.gitpod.io']
+
+# Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
-
-CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu31.gitpod.io']
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = 'pk_test_51KRbLDEMXFopQssrXNQlmYPZ21yUAcAhByd9Y1oOHwwgpTgsFjYCA69whcZPImfdaHELsPc4h1QyRynMdhxKKmxz00DmkoMwCB'
+STRIPE_SECRET_KEY = 'sk_test_51KRbLDEMXFopQssrG10vzr7VWMCfR3mra9E7FnWvvdziM1aDZskrezQnCJ9lEK2WLf3gpE6hGsGBbqaGjFHWJg8B00tGECsqFQ'
