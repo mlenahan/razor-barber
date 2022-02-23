@@ -169,7 +169,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu31.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu33.gitpod.io']
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
@@ -177,5 +177,5 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '') #pk_test_51KRbLDEMXFopQssrXNQlmYPZ21yUAcAhByd9Y1oOHwwgpTgsFjYCA69whcZPImfdaHELsPc4h1QyRynMdhxKKmxz00DmkoMwCB
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '') #sk_test_51KRbLDEMXFopQssrG10vzr7VWMCfR3mra9E7FnWvvdziM1aDZskrezQnCJ9lEK2WLf3gpE6hGsGBbqaGjFHWJg8B00tGECsqFQ
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '') #whsec_u2VmSc97OWg6C89f4hI7zHBNUjPKU3RO
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '') #whsec_CpVjkfrUf32aV0UutXdRsBXtF7qo6AHO
 DEFAULT_FROM_EMAIL = 'barber@example.com'
