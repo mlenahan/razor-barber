@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product
-
+from django.contrib.auth.models import User, Group
 from .forms import ProductForm
 
 
@@ -127,3 +127,15 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def user_is_barber(request):
+
+    barbers = User.objects.filter(groups__name='Barber')
+    query = None
+
+    context = {
+        'barbers': barbers,
+    }
+
+    return render(request, 'products/barbers.html', context)
