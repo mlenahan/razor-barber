@@ -22,34 +22,11 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
-                    {% for group in groups %}
-                    {% if group.name is 'Barbers' %}
+                    {% for barber in barbers %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ user.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
+                                    <p class="mb-0">{{ barber.get_full_name }}</p>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +50,7 @@
                                 <hr>
                             </div>
                         {% endif %}
-                    {% endif %}
+                        
                     {% endfor %}
                 </div>
             </div>

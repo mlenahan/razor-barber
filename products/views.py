@@ -132,7 +132,6 @@ def delete_product(request, product_id):
 def user_is_barber(request):
 
     barbers = User.objects.filter(groups__name='Barber')
-    query = None
 
     context = {
         'barbers': barbers,
