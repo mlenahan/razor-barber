@@ -1,3 +1,4 @@
+from django import forms
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
 
@@ -7,3 +8,11 @@ class CustomClearableFileInput(ClearableFileInput):
     initial_text = _('Current Image')
     input_text = _('')
     template_name = 'products/custom_widget_templates/custom_clearable_file_input.html'
+
+
+class TimePickerInput(forms.TimeInput):
+    input_type = 'time'
+
+
+class DateTimePickerInput(forms.DateTimeInput):
+    input_type = 'datetime'

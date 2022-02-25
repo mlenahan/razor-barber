@@ -1,6 +1,7 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product
+from products.widgets import TimePickerInput, DateTimePickerInput
 
 
 class ProductForm(forms.ModelForm):
@@ -16,6 +17,6 @@ class ProductForm(forms.ModelForm):
 
 
 class DateForm(forms.Form):
-    
     date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
-    time = forms.DateField(widget=forms.DateInput(attrs={'class':'timepicker'}))
+    my_time_field = forms.TimeField(widget=TimePickerInput)
+    my_date_time_field = forms.DateTimeField(widget=DateTimePickerInput)
