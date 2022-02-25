@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product
 from django.contrib.auth.models import User, Group
-from .forms import ProductForm
+from .forms import ProductForm, DateForm
 
 
 def all_products(request):
@@ -138,3 +138,16 @@ def user_is_barber(request):
     }
 
     return render(request, 'products/barbers.html', context)
+
+
+def booking_form(request):
+
+    form = DateForm(request.POST)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'products/booking_form.html', context)
+
+
