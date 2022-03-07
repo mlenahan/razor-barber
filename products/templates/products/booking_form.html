@@ -23,6 +23,7 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <h3 class="logo-font">Pick a time for your {{ service.name}} with {{ barber.first_name }}</h3>
                             <form method="POST" action="{% url 'booking' %}">
                                 {% csrf_token %}
                                 {{ form }}

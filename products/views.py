@@ -169,11 +169,25 @@ def booking_form(request):
     # Add service and barber to context
     # Render title 'pick a time for your product.name with barber.name'
 
+    if request.GET and 'service-id' in request.GET:
+        service_id = request.GET['service-id']
+    else:
+        return HttpResponseNotFound()
+
+    if request.GET and 'barber-id' in request.GET:
+        barber_id = request.GET['barber-id']
+    else:
+        return HttpResponseNotFound()
+    barber = get_object_or_404(User, pk=barber_id)
+    service = get_object_or_404(Product, pk=service_id, is_service=True)
 
     form = DateForm(request.POST)
 
     context = {
         'form': form,
+        'service': service,
+        'barber': barber,
+
     }
 
     return render(request, 'products/booking_form.html', context)
