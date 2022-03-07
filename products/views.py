@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.http import HttpResponseNotFound
 from .models import Product
 from django.contrib.auth.models import User, Group
 from .forms import ProductForm, DateForm
@@ -131,16 +132,43 @@ def delete_product(request, product_id):
 
 def user_is_barber(request):
 
+    # Get service ID from QS params. If not sevice ID in QS params or serive does not exist, show 404
+
+    # Check if search param exists
+    # If it exists, assign to variable
+    # If not, return 404
+    # Try to get the service or 404
+    # Add service to context
+
+    if request.GET and 'service-id' in request.GET:
+        service_id = request.GET['service-id']
+    else:
+        return HttpResponseNotFound()
+    service = get_object_or_404(Product, pk=service_id, is_service=True)
+
     barbers = User.objects.filter(groups__name='Barber')
 
     context = {
         'barbers': barbers,
+        'service': service,
     }
 
     return render(request, 'products/barbers.html', context)
 
 
 def booking_form(request):
+
+    # Check if sevice search param exists
+    # If it exists, assign to variable
+    # If not, 404
+    # Check if barber search param exists
+    # If it exists, assign to variable
+    # If not, 404
+    # Try to get the service or 404
+    # Try to get the barber or 404
+    # Add service and barber to context
+    # Render title 'pick a time for your product.name with barber.name'
+
 
     form = DateForm(request.POST)
 

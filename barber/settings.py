@@ -169,7 +169,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu33.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu34xl.gitpod.io']
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
