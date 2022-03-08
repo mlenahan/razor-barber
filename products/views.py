@@ -3,9 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.http import HttpResponseNotFound
-from .models import Product
+from .models import Product, Reservation
 from django.contrib.auth.models import User, Group
 from .forms import ProductForm, DateForm
+from datetime import datetime
 
 
 def all_products(request):
@@ -131,15 +132,6 @@ def delete_product(request, product_id):
 
 
 def user_is_barber(request):
-
-    # Get service ID from QS params. If not sevice ID in QS params or serive does not exist, show 404
-
-    # Check if search param exists
-    # If it exists, assign to variable
-    # If not, return 404
-    # Try to get the service or 404
-    # Add service to context
-
     if request.GET and 'service-id' in request.GET:
         service_id = request.GET['service-id']
     else:
@@ -157,17 +149,6 @@ def user_is_barber(request):
 
 
 def booking_form(request):
-
-    # Check if sevice search param exists
-    # If it exists, assign to variable
-    # If not, 404
-    # Check if barber search param exists
-    # If it exists, assign to variable
-    # If not, 404
-    # Try to get the service or 404
-    # Try to get the barber or 404
-    # Add service and barber to context
-    # Render title 'pick a time for your product.name with barber.name'
 
     if request.GET and 'service-id' in request.GET:
         service_id = request.GET['service-id']
@@ -193,3 +174,31 @@ def booking_form(request):
     return render(request, 'products/booking_form.html', context)
 
 
+def user_reservation(request):
+
+    if request.method == 'POST':
+        form = DateForm(request.POST)
+        if form.is_valid():
+            time = form['time_choice'].value()
+            date = form['date'].value()
+
+            date_time = datetime.combine(time, date)
+
+    if request.GET and 'service-id' in request.GET:
+        service_id = request.GET['service-id']
+    else:
+        return HttpResponseNotFound()
+
+    if request.GET and 'barber-id' in request.GET:
+        barber_id = request.GET['barber-id']
+    else:
+        return HttpResponseNotFound()
+    barber = User.objects.get(pk=barber_id)
+    service = Product.objects.get(pk=service_id, is_service=True)
+    current_user = request.user
+
+    reservation = Reservation.objects.create(datetime=date_time, barber=barber, product=service, user=current_user)
+
+    context = {'reservation': reservation}
+
+    return render(request, 'products/reservation_confirmation.html', context)
