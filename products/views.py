@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.http import HttpResponseNotFound
 from .models import Product, Reservation
@@ -148,57 +149,43 @@ def user_is_barber(request):
     return render(request, 'products/barbers.html', context)
 
 
+def get_qs_param(request, param_name):
+    if request.GET and param_name in request.GET:
+        return request.GET[param_name]
+    raise ValueError()
+
+
 def booking_form(request):
-
-    if request.GET and 'service-id' in request.GET:
-        service_id = request.GET['service-id']
-    else:
+    current_user = request.user
+    try:
+        service_id = get_qs_param(request, 'service-id')
+        barber_id = get_qs_param(request, 'barber-id')
+        barber = User.objects.get(pk=barber_id)
+        service = Product.objects.get(pk=service_id, is_service=True)
+    except (ValueError, ObjectDoesNotExist):
         return HttpResponseNotFound()
 
-    if request.GET and 'barber-id' in request.GET:
-        barber_id = request.GET['barber-id']
-    else:
-        return HttpResponseNotFound()
-    barber = get_object_or_404(User, pk=barber_id)
-    service = get_object_or_404(Product, pk=service_id, is_service=True)
-
-    form = DateForm(request.POST)
-
-    context = {
-        'form': form,
-        'service': service,
-        'barber': barber,
-
-    }
-
-    return render(request, 'products/booking_form.html', context)
-
-
-def user_reservation(request):
-
-    if request.method == 'POST':
+    if request.method == 'GET':
+        form = DateForm()
+        context = {
+            'form': form,
+            'service': service,
+            'barber': barber,
+        }
+        return render(request, 'products/booking_form.html', context)
+    
+    elif request.method == 'POST':
         form = DateForm(request.POST)
         if form.is_valid():
-            time = form['time_choice'].value()
-            date = form['date'].value()
-
-            date_time = datetime.combine(time, date)
-
-    if request.GET and 'service-id' in request.GET:
-        service_id = request.GET['service-id']
-    else:
-        return HttpResponseNotFound()
-
-    if request.GET and 'barber-id' in request.GET:
-        barber_id = request.GET['barber-id']
-    else:
-        return HttpResponseNotFound()
-    barber = User.objects.get(pk=barber_id)
-    service = Product.objects.get(pk=service_id, is_service=True)
-    current_user = request.user
-
-    reservation = Reservation.objects.create(datetime=date_time, barber=barber, product=service, user=current_user)
-
-    context = {'reservation': reservation}
-
-    return render(request, 'products/reservation_confirmation.html', context)
+            time = form.cleaned_data['time_choice']
+            date = form.cleaned_data['date']
+            dt = datetime.combine(date, time)
+            reservation = Reservation.objects.create(date_time=dt, barber=barber, product=service, user=current_user)
+            context = {'reservation': reservation}
+            return render(request, 'products/booking_success.html', context)
+        context = {
+            'form': form,
+            'service': service,
+            'barber': barber,
+        }
+        return render(request, 'products/booking_form.html', context)

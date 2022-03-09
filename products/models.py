@@ -14,7 +14,7 @@ class Product(models.Model):
 
 
 class Reservation(models.Model):
-    datetime = models.DateTimeField()
+    date_time = models.DateTimeField()
     barber = models.ForeignKey(User, on_delete=models.CASCADE, related_name='barber_reservation_set')
     product = models.ForeignKey("Product", on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

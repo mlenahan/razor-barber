@@ -1,29 +1,9 @@
 from django import forms
+from django.contrib.admin import widgets
 from .widgets import CustomClearableFileInput
 from .models import Product
 from products.widgets import TimePickerInput, DateTimePickerInput
 from datetime import datetime, timedelta
-
-CHOICES = (
-    (10.00, '10.00'),
-    (10.30, '10.30'),
-    (11.00, '11.00'),
-    (11.30, '11.30'),
-    (12.00, '12.00'),
-    (12.30, '12.30'),
-    (13.00, '13.00'),
-    (13.30, '13.30'),
-    (14.00, '14.00'),
-    (14.30, '14.30'),
-    (15.00, '15.00'),
-    (15.30, '15.30'),
-    (16.00, '16.00'),
-    (16.30, '16.30'),
-    (17.00, '17.00'),
-    (17.30, '17.30'),
-    (18.00, '18.00'),
-    (18.30, '18.30'),
-)
 
 
 class ProductForm(forms.ModelForm):
@@ -43,26 +23,10 @@ def datetime_range(start, end, delta):
 
 
 class DateForm(forms.Form):
-    date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
-    time_choice = forms.ChoiceField(choices=[])
+    dt = forms.DateTimeField(widget=widgets.AdminSplitDateTime)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        time_field = self.fields['time_choice']
-        today = datetime.today()
+
         
-        opening = today.replace(hour=9, minute=0, second=0, microsecond=0)
-        closing = today.replace(hour=17, minute=0, second=0, microsecond=0)
-        delta = timedelta(minutes=30)
-        time_range = datetime_range(opening, closing, delta)
-        choices = []
-        for dt in time_range:
-            value = dt.time
-            display = dt.strftime('%H:%M')
-            choice = [value, display]
-            choices.append(choice)
-        time_field.choices = choices
-
 
     
 
