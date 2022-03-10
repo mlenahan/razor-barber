@@ -10,6 +10,16 @@
 {% endblock %}
 
 {% block content %}
+<script src="{% url 'js-catalog' %}"></script>
+<script src="{% static '/admin/js/core.js' %}"></script>
+<script>
+    $(function () {
+      $("#id_date").datetimepicker({
+        format: 'd/m/Y H:i',
+      });
+    });
+  </script>
+<link rel="stylesheet" href="{% static 'admin/css/widgets.css'%}">
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
@@ -26,7 +36,8 @@
                             <h3 class="logo-font">Pick a time for your {{ service.name}} with {{ barber.first_name }}</h3>
                             <form method="POST" action="{% url 'booking' %}?service-id={{service.id}}&barber-id={{barber.id}}">
                                 {% csrf_token %}
-                                {{ form }}
+                                {{ form.media }}
+                                {{ form.as_p }}
                                 <button type="submit">
                                     Book
                                 </button>

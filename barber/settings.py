@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'crispy_forms',
+    'datetimepicker',
+    'datetimewidget',
 ]
 
 MIDDLEWARE = [

@@ -1,9 +1,16 @@
 from django import forms
-from django.contrib.admin import widgets
+from datetimepicker.widgets import DateTimePicker
+from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget, AdminSplitDateTime
 from .widgets import CustomClearableFileInput
 from .models import Product
-from products.widgets import TimePickerInput, DateTimePickerInput
-from datetime import datetime, timedelta
+from datetimewidget.widgets import DateTimeWidget
+from datetime import datetime
+
+
+dateTimeOptions = {
+    'minuteStep': 30,
+    'startDate': datetime.now(),
+}
 
 
 class ProductForm(forms.ModelForm):
@@ -23,12 +30,11 @@ def datetime_range(start, end, delta):
 
 
 class DateForm(forms.Form):
-    dt = forms.DateTimeField(widget=widgets.AdminSplitDateTime)
 
+    dt = forms.DateTimeField(widget=DateTimeWidget(options=dateTimeOptions))
 
         
 
-    
 
 # dts = [dt.strftime('%Y-%m-%d T%H:%M Z') for dt in 
 #        datetime_range(datetime(2016, 9, 1, 7), datetime(2016, 9, 1, 9+12), 
