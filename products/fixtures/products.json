@@ -9,5 +9,128 @@
           "is_service": false,
           "image":"ruger_essential-50ml.jpg"
        }
-    }
+    },
+
+    {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . Matte finish setting spray",
+         "description":"Lock in styles with our superior men’s hairspray. Formulated to provide a natural finish and to maintain position throughout the day. It gives great protection from the elements and washes out with ease.",
+         "price":12.00,
+         "is_service": false,
+         "image":"lock-hold.jpg"
+      }
+   },
+
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . MATTE Vol. 1",
+         "description":"Versatile matte, clay like product. Can be used as a blow dry aid to pre style and to dress hair giving a soft and natural look with good hold. ",
+         "price":12.00,
+         "is_service": false,
+         "image":"matte-v1.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . MATTE Vol. 2",
+         "description":"Soft sheen. Smelling of lemons and melons, perfect for looser and a more wavy kind of style. Pliable dry clay to be blow waved into hair or dressed lightly with a medium hold.",
+         "price":12.00,
+         "is_service": false,
+         "image":"matte-v2.jpg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . ARGON Oil Conditioner - 1ltr",
+         "description":"Argon Oil Conditioner gently nourishes, detangles, moisturises and protects, leaving hair soft, manageable and ready to style. Paraben and sulphate free. Ideal for all hair types.",
+         "price":22.00,
+         "is_service": false,
+         "image":"argon-oil-conditioner.jpg"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . ARGON Oil Shampoo- 1ltr",
+         "description":"Argon Oil shampoo has an ultra-rich formulation and provides high levels of hydration to the hair and scalp. Paraben and sulphate free. Perfect for dry and damaged hair.",
+         "price":22.00,
+         "is_service": false,
+         "image":"argon-oil-shampoo.jpg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . Tea Tree Conditioner – 1ltr",
+         "description":"Tea tree conditioner is used to treat scalp conditions such as dandruff and to stimulate new hair growth by clearing out old dead skin cells from hair follicles. Giving a tingly feeling, the fresh and minty smell makes you feel invigorated and energized.",
+         "price":22.00,
+         "is_service": false,
+         "image":"tea-tree-conditioner.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER Essential 50ml",
+         "description":"Essential is for male or female use on wet or dry hair to style or pre-style through blow drying. Great hold with a soft natural look. Water based matte clay with a soft masculine scent.",
+         "price":8.00,
+         "is_service": false,
+         "image":"ruger_essential-50ml.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . Tea Tree Shampoo – 1ltr",
+         "description":"Tea tree shampoo is used to treat scalp conditions such as dandruff and to stimulate new hair growth by clearing out old dead skin cells from hair follicles. Giving a tingly feeling, the fresh and minty smell makes you feel invigorated and energized. Just be careful of your man bits feeling too fresh.",
+         "price":22.00,
+         "is_service": false,
+         "image":"tea-tree-shampoo.jpg"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . Volumising Powder",
+         "description":"This styling powder has been designed to give texture and volume with the deception that no product has been used at all. Sprinkle lightly in blow dried hair and arrange into place for a reworkable strong hold.",
+         "price":12.00,
+         "is_service": false,
+         "image":"powder.jpg"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . SEA SALT 50ML",
+         "description":"With a sensual and contemporary scent of Italian bergamot, Oak moss and Calville Blanc Apples, our Sea Salt spray has ingredients that pulls moisture away from the hair. Being acidic it opens up the cuticle providing a vast amount of texture. Providing a perfect pre styling agent when blow drying the hair.",
+         "price":5.00,
+         "is_service": false,
+         "image":"sea-salt.jpg"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "name":"RUGER . SATIN Vol. 3",
+         "description":"For a look with a higher shine and medium hold, smelling sweeter like bananas. Versatile shaping paste that adds texture to the hair providing a lightweight but strong hold whilst providing a great finish.",
+         "price":12.00,
+         "is_service": false,
+         "image":"satin.jpg"
+      }
+   }
 ]
