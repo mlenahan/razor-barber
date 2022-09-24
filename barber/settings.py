@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-+seki)#gme9k-cn8#-f%*ka(b_2fribfbp3*o9$tdwgmb-or#*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://barber-django-ml.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['barber-django-ml.herokuapp.com', 'localhost']
 
 
 # Application definition
