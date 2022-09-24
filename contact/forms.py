@@ -1,17 +1,34 @@
 from django import forms
+from .models import Contact
 
 
-class ContactForm(forms.Form):
-    """
-    Class for the form used on Contact Us page
-    """
-    name = forms.CharField(required=True)
-    email = forms.EmailField(required=True)
-    message = forms.CharField(widget=forms.Textarea, required=True)
+class ContactForm(forms.ModelForm):
+
+    class Meta:
+        model = Contact
+        fields = ('name', 'email', 'subject', 'body',)
 
     def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
-        self.fields['message'].widget.attrs['rows'] = 4
+        placeholders = {
+            'name': 'Name',
+            'email': 'Email Address',
+            'subject': 'Subject',
+            'body': 'Message',
+        }
 
+        self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'contact-form-input'
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = ('border-black '
+                                                        'rounded-0 '
+                                                        'profile-form-input')
+            self.fields[field].label = False
