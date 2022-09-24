@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
-    'storages'
+    'storages',
     'crispy_forms',
     'datetimepicker',
     'datetimewidget',
