@@ -19,7 +19,7 @@ def contact_us(request):
 
     form = ContactForm()
 
-    template = 'contact/contact.html'
+    template = 'contact.html'
     context = {
         'form': form,
     }
