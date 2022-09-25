@@ -30,6 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = ['barber-django-ml.herokuapp.com', 'localhost']
 
@@ -206,7 +207,7 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu59.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-mlenahan-ms5django-lhas4inctd7.ws-eu67.gitpod.io', 'https://barber-django-ml.herokuapp.com/']
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
