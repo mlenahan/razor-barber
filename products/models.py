@@ -36,8 +36,8 @@ HOUR_OF_DAY_24 = [(i, i) for i in range(1, 25)]
 
 
 class Reservation(models.Model):
-    opening_time = models.PositiveSmallIntegerField(choices=HOUR_OF_DAY_24)
-    closing_time = models.PositiveSmallIntegerField(choices=HOUR_OF_DAY_24)
+    opening_time = models.PositiveSmallIntegerField(choices=HOUR_OF_DAY_24, default=0)
+    closing_time = models.PositiveSmallIntegerField(choices=HOUR_OF_DAY_24, default=0)
     barber = models.ForeignKey(User, on_delete=models.CASCADE, related_name='barber_reservation_set')
     product = models.ForeignKey("Product", on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
