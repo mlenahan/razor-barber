@@ -265,6 +265,14 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.white-footer {
+    background-color: white;
+}
+
+#mc_embed_signup {
+    padding: 0;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
