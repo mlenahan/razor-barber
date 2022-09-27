@@ -1,7 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product
-from datetimewidget.widgets import DateTimeWidget
+from .models import Product, Review
 from datetime import datetime
 
 
@@ -28,13 +27,19 @@ def datetime_range(start, end, delta):
         current += delta
 
 
-class DateForm(forms.Form):
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('content',)
 
-    dt = forms.DateTimeField(widget=DateTimeWidget(options=dateTimeOptions))
+    def __init__(self, *args, **kwargs):
 
-
-# dts = [dt.strftime('%Y-%m-%d T%H:%M Z') for dt in
-#        datetime_range(datetime(2016, 9, 1, 7), datetime(2016, 9, 1, 9+12),
-#        timedelta(minutes=15))]
-
-# print(dts)
+        super().__init__(*args, **kwargs)
+        self.fields['content'].label = False
+        self.fields['content'].widget.attrs['placeholder'] = (
+            'Please write your review here...'
+        )
+        self.fields['content'].widget.attrs['rows'] = 5
+        self.fields['content'].widget.attrs['class'] = 'review-form-input'
+        self.fields['content'].widget.attrs['id'] = 'review-form-content'
+        self.fields['content'].widget.attrs['aria-label'] = 'review content'
