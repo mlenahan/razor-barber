@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block extra_title %}| Delete Reply?{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h5 class="logo-font mb-4">Confirm Delete Of Reply</h5>            
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p>Are you sure you want to delete the following reply?</p>
+            <p class="font-italic">{{ reply.body }}</p>
+            <div class="text-right mt-5">                
+                <a href="{% url 'blog_detail' post.id %}" class="btn btn-outline-black rounded-0">Cancel</a>
+                <a href="{% url 'blog_reply_delete' reply.id %}" class="btn btn-red text-white rounded-0">Delete</a>                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

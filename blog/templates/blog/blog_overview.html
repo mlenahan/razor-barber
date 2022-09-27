@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block extra_title %}| Razor Blog{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h5 class="logo-font mb-4">Razor Blog</h5>
+            <hr>
+        </div>              
+    </div>
+    <div class="row">        
+        {% for post in posts %}  
+        <div class="col-md-4 col-lg-3 my-auto">
+            <a class="blog-link" href="{% url 'blog_detail' post.id %}">                                                   
+                {% if post.image %}
+                    <div class="my-3 text-center">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                    </div>
+                {% else %}
+                    <div class="my-3 text-center">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" class="img-fluid">
+                    </div>
+                {% endif %}
+                <p class="lead">{{ post.title }}</p>   
+                <p class="small d-block d-md-inline"><strong>Created:</strong> {{ post.created }}</p>      
+            </a>
+        </div>                  
+        {% endfor %}            
+    </div>  
+</div>
+{% endblock %}
