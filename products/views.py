@@ -4,9 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.http import HttpResponseNotFound
-from .models import Product, Reservation, Review
+from .models import Product, Reservation
 from django.contrib.auth.models import User
-from .forms import ProductForm, DateForm, ReviewForm
+from .forms import ProductForm, DateForm
 from datetime import datetime
 
 
