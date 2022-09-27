@@ -10,15 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<script src="{% url 'js-catalog' %}"></script>
-<script src="{% static '/admin/js/core.js' %}"></script>
-<script>
-    $(function () {
-      $("#id_date").datetimepicker({
-        format: 'd/m/Y H:i',
-      });
-    });
-  </script>
 <link rel="stylesheet" href="{% static 'admin/css/widgets.css'%}">
     <div class="overlay"></div>
     <div class="container-fluid">
