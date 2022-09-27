@@ -199,3 +199,8 @@ def booking_form(request):
             "barber": barber,
         }
         return render(request, "products/booking_form.html", context)
+
+
+def booking_failure(request):
+
+    return render(request, "products/booking_failure.html")

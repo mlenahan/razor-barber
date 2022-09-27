@@ -1,8 +1,12 @@
 from django import forms
-from .widgets import CustomClearableFileInput
+from .widgets import (
+    CustomClearableFileInput,
+    DatePickerInput,
+    TimePickerInput,
+)
 from .models import Product
 from datetimewidget.widgets import DateTimeWidget
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 dateTimeOptions = {
@@ -28,13 +32,17 @@ def datetime_range(start, end, delta):
         current += delta
 
 
-class DateForm(forms.Form):
+# class DateForm(forms.Form):
 
-    dt = forms.DateTimeField(widget=DateTimeWidget(options=dateTimeOptions))
-
-
+#     dt = forms.DateTimeField(widget=DateTimeWidget(options=dateTimeOptions))
 # dts = [dt.strftime('%Y-%m-%d T%H:%M Z') for dt in
-#        datetime_range(datetime(2016, 9, 1, 7), datetime(2016, 9, 1, 9+12),
+#        datetime_range(datetime(2016, 9, 1, 7),
+# datetime(2016, 9, 1, 9+12),
 #        timedelta(minutes=15))]
 
 # print(dts)
+
+
+class DateForm(forms.Form):
+    date = forms.DateField(widget=DatePickerInput)
+    time_choice = forms.TimeField(widget=TimePickerInput)
