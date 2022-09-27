@@ -13,6 +13,25 @@ class Product(models.Model):
         return self.name
 
 
+class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey(
+        Product,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name='reviews'
+    )
+    rating = models.IntegerField(null=False, blank=False)
+    content = models.TextField(max_length=500, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-date']
+
+    def __str__(self):
+        return f'{self.user} on {self.date}'
+
+
 def validate_even(value):
     if value % 2 != 0:
         raise ValidationError(
