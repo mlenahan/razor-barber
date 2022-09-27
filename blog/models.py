@@ -18,7 +18,6 @@ class BlogPost(models.Model):
 
 
 class Reply(models.Model):
-    
 
     class Meta:
         verbose_name_plural = 'Replies'
