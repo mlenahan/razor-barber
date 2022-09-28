@@ -1,108 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Razor Barber
 
-Welcome Michael Lenahan,
+Razor Barber is a website selling top of the range hair products as well as allowing users to book haircuts. Users are able to browse the selection of hair cproducts and purchase them. Users will be able to look at previous orders and update their delivery details if they register an account. Admin users can add, edit and delete products. Non-admin users are also able to add, edit and delete replies to the blog posts they have made.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Link to deployed site](https://barber-django-ml.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## UX
 
-## Gitpod Reminders
+### User Stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#### New users
 
-`python3 -m http.server`
+- As a site user I can browse through products so that I can decide what I may be interested in buying
+- As a site user I can look at product details so that I can decide whether I would like to buy it
+- As a site user I can search for products so that I have another way of looking for items
+- As a site user I can sort products on criteria such as price so that I have a method of ordering the products as I prefer
+- As a site user I can add products I want to purchase to a basket so that I may then decide whether to purchase them or not
+- As a site user I can view the contents of my shopping basket so that I can make any adjustments to it
+- As a site user I can perform a checkout on my shopping basket so that I can create an order
+- As a site user I can register an account so that I can make use of features reserved for registered users
+- As a site user I can log in so that I can use features reserved for registered users
+- As a site user I can log out so that my account remains secure if I were to visit the site from a shared PC
+- As a site user I can view a profile for my user account so that I can see my order history and also make any adjustments to the details kept on record for me
+- As a site user I can submit a message to admin so that any feedback or issues can be raised to them
+- As a site user I can reply to blog posts so that I can express an opinion about them or add a comment 
+- As a site user I can edit my replies to the blog posts so that I may update them if needed
+- As a site user I can delete any of my replies to the blog posts so that I can remove them if I feel they’re no longer needed
+- As a site admin I can manage products so that I may add, update or delete them as needed
+- As a site admin I can manage user accounts so that any required changes to them can be made
+- As a site admin I can view created orders so that they may be fulfilled, or amended if needs be
+- As a site admin I can view messages submitted via the contact us section so that I may act upon them
+- As a site admin I can manage the content on the blog page so that it can be amended if needed
 
-A blue button should appear to click: _Make Public_,
+#### Returning users
 
-Another blue button should appear to click: _Open Browser_.
+- As a returning site user I can check to see if any new products have been added so that I can decide if I want to buy any
+- As a returning site user I can view my user profile (if I registered an account) so that I can edit my details and also view previous orders
+- As a returning site user I can see whether any new blog posts and associated replies have been added
+- As a returning site admin I can see whether any new messages have been submitted so that I can action them accordingly
+- As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
+- As a returning site admin I can update the blog page content so that any required changes to it are reflected
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Frequent users
 
-A blue button should appear to click: _Make Public_,
+- As per returning users
 
-Another blue button should appear to click: _Open Browser_.
+### Design
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Imagery
 
-To log into the Heroku toolbelt CLI:
+- This website features a simple background image showing some texture on the homepage. The other images present are those for the products. I also make use of Font Awesome icons.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Typography
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- The font used in my application is Lato. 
 
-------
+#### Colour scheme
 
-## Release History
+- i have used a monochromatic colour scheme to align with my preference for clean, minimalistic approach to styling
+ 
+ ### Schema
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The schema overview for my application is as below:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Image of schema overview](https://raw.githubusercontent.com/mlenahan/ms-5-django/main/screenshots/schema.JPG)<br>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+As seen above, the Category table has a one-to-many link with Product as one category can contain many products.
+The Order table has a one-to-many link with OrderLineItem, as one order can contain many line items. There is also a one-to-many link between Product and OrderLineItem as the same product can appear in many line items on different orders.<br><br>
+There is a one-to-many relationship between UserProfile and Order as one user can have many orders associated with them. The UserProfile table also has a one-to-one link with the built-in Django User model (shown here for demonstration purposes) as each user can have only one profile linked to them. The BlogPost table has a one-to-many relationship with Reply, which allows for multiple replies to a particular blog post. There is also a one-to-many relationship between the User model and the Reply table as one user may have many replies.<br><br>
