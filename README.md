@@ -62,7 +62,7 @@ Razor Barber is a website selling top of the range hair products as well as allo
 
 The schema overview for my application is as below:
 
-![Image of schema overview](https://raw.githubusercontent.com/mlenahan/ms-5-django/main/screenshots/schema.JPG)<br>
+![Image of schema overview](media/readme_screenshots/schema.jpg)<br>
 
 As seen above, the Category table has a one-to-many link with Product as one category can contain many products.
 The Order table has a one-to-many link with OrderLineItem, as one order can contain many line items. There is also a one-to-many link between Product and OrderLineItem as the same product can appear in many line items on different orders.<br><br>
