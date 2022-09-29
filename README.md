@@ -76,3 +76,25 @@ Wireframes were created on Balsamiq (see links below)
 * [Mobile](media/wireframes/mobile-wireframe.pdf)
 * [Tablet](media/wireframes/tablet-wireframe.pdf)
 * [Desktop](media/wireframes/desktop-wireframe.pdf)
+
+Some final design choices aren't reflected in wireframes
+
+### Business Model
+
+I have used a B2C buisness model for the site. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and easy purchases, which is not something you would use in a B2B environment. 
+
+### Marketing Strategy
+
+* I have made use of the following:
+
+    * Social media advertising, due to it being a no cost option and potentially able to reach many users
+    * Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
+    * SEO and looking to rank well in searches on Google to aid visibility of my application
+
+### Facebook Business Page
+
+You can find a link to the business page [here.](https://www.facebook.com/Razor-Barber-108482478691688). There is also a link to tit in the footer of the site.
+
+![Facebook](media/readme_screenshots/facebook.jpg)
+
+
