@@ -27,9 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+# SECRET_KEY = "16@_w+#a8v27#w=_7&d5!r(lxjb)3vvuqjqygmdxm*8&(e0%kn"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['barber-django-ml.herokuapp.com', 'localhost']
 

@@ -1,8 +1,29 @@
 # Razor Barber
 
+## Overview
+
 Razor Barber is a website selling top of the range hair products as well as allowing users to book haircuts. Users are able to browse the selection of hair cproducts and purchase them. Users will be able to look at previous orders and update their delivery details if they register an account. Admin users can add, edit and delete products. Non-admin users are also able to add, edit and delete replies to the blog posts they have made.
 
 [Link to deployed site](https://barber-django-ml.herokuapp.com/)
+
+## Business Model
+
+I have used a B2C buisness model for the site. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and easy purchases, which is not something you would use in a B2B environment. 
+
+### Marketing Strategy
+
+* I have made use of the following:
+
+    * Social media advertising, due to it being a no cost option and potentially able to reach many users
+    * Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
+    * SEO and looking to rank well in searches on Google to aid visibility of my application
+
+### Facebook Business Page
+
+You can find a link to the business page [here.](https://www.facebook.com/Razor-Barber-108482478691688). There is also a link to tit in the footer of the site.
+
+![Facebook](media/readme_screenshots/facebook.jpg)
+
 
 ## UX
 
@@ -77,24 +98,111 @@ Wireframes were created on Balsamiq (see links below)
 * [Tablet](media/wireframes/tablet-wireframe.pdf)
 * [Desktop](media/wireframes/desktop-wireframe.pdf)
 
-Some final design choices aren't reflected in wireframes
+Some final design choices aren't reflected in wireframes.
 
-### Business Model
+## Features
 
-I have used a B2C buisness model for the site. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and easy purchases, which is not something you would use in a B2B environment. 
+### Existing Features
 
-### Marketing Strategy
+Details of all site features are listed below.
 
-* I have made use of the following:
+Header contains a logo, nav items, a search bar, account icon and basket icon.
 
-    * Social media advertising, due to it being a no cost option and potentially able to reach many users
-    * Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
-    * SEO and looking to rank well in searches on Google to aid visibility of my application
+![Image of header](media/readme_screenshots/header.png)<br>
 
-### Facebook Business Page
+Homepage:
 
-You can find a link to the business page [here.](https://www.facebook.com/Razor-Barber-108482478691688). There is also a link to tit in the footer of the site.
+![Image of homepage](media/readme_screenshots/homepage.jpg)<br>
 
-![Facebook](media/readme_screenshots/facebook.jpg)
+The footer contains an about us, link to socials, and a sign up to newletter.
+
+![Image of footer](media/readme_screenshots/footer.png)<br>
+
+Log in.
+
+![Image of login page](media/readme_screenshots/signin.png)<br>
+
+Logout.
+
+![Image of logout page](media/readme_screenshots/signout.png)<br>
+
+Account registration.
+
+![Image of sign up page](media/readme_screenshots/signup.png)<br>
+
+Product overview.
+
+![Image of products page](media/readme_screenshots/products.png)<br>
+
+Product detail
+
+![Image of product detail page](media/readme_screenshots/product_detail.png)<br>
+
+Added to basket.
+
+![Image of notification](media/readme_screenshots/added_to_bag.png)<br>
+
+Basket view.
+
+![Image of basket page](media/readme_screenshots/shopping_bag.png)<br>
+
+Checkout.
+
+![Image of checkout page 1](media/readme_screenshots/checkout.png)<br>
+
+Checkout success
+
+![Image of checkout complete page](media/readme_screenshots/order_success.png)<br>
+
+Profile view.
+
+![Image of profile page](media/readme_screenshots/profile.png)<br>
+
+Order details.
+
+![Image of order history page](media/readme_screenshots/order_history.png)<br>
+
+Blog overview.
+
+![Image of blog overview page](media/readme_screenshots/blog.png)<br>
+
+Blog post detail.
+
+![Image of blog detail page](media/readme_screenshots/blog_post_detail.png)<br>
+
+Blog commenting. Comments can be edited and deleted.
+
+![Image of blog detail page](media/readme_screenshots/blog_comment.png)<br>
+
+Contact Us
+
+![Image of contact us page](media/readme_screenshots/contact_us.png)<br>
+
+Product management for admins.
+
+![Image of add product page](media/readme_screenshots/product_management.png)<br>
 
 
+Admin users can also edit and delete products:
+
+![Image of edit product page](media/readme_screenshots/product_edit_delete.png)<br>
+
+## Features left to implemement
+
+I attempted to add a booking system to this site but I couldn't find a solution to create a reservation. i have still included some of the booking flow in the site but have added an error page which lets the user know the system is down.
+
+Book now button on homepage.
+
+![Image of edit product page](media/readme_screenshots/book_now.png)<br>
+
+Service selection.
+
+![Image of edit product page](media/readme_screenshots/services.png)<br>
+
+Barber selection.
+
+![Image of edit product page](media/readme_screenshots/barbers.png)<br>
+
+Custom error page.
+
+![Image of edit product page](media/readme_screenshots/error_page.png)<br>
