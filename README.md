@@ -75,4 +75,4 @@ Wireframes were created on Balsamiq (see links below)
 
 * [Mobile](media/wireframes/mobile-wireframe.pdf)
 * [Tablet](media/wireframes/tablet-wireframe.pdf)
-* [Desktop](media/wireframes/mdesktop-wireframe.pdf)
+* [Desktop](media/wireframes/desktop-wireframe.pdf)
