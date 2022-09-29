@@ -74,5 +74,5 @@ There is a one-to-many relationship between UserProfile and Order as one user ca
 Wireframes were created on Balsamiq (see links below)
 
 * [Mobile](media/wireframes/mobile-wireframe.pdf)
-* [Tablet](media/wireframes/tablet-wireframes.pdf)
-* [Desktop](media/wireframes/ms4-desktop-bals.pdf)
+* [Tablet](media/wireframes/tablet-wireframe.pdf)
+* [Desktop](media/wireframes/mdesktop-wireframe.pdf)
