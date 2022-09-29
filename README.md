@@ -71,4 +71,8 @@ There is a one-to-many relationship between UserProfile and Order as one user ca
 
 ### Wireframes
 
-* Wireframes can be found [here.](https://github.com/mlenahan/ms-5-django/blob/main/WIREFRAMES.md)
+Wireframes were created on Balsamiq (see links below)
+
+* [Mobile](media/wireframes/mobile-wireframe.pdf)
+* [Tablet](media/wireframes/tablet-wireframes.pdf)
+* [Desktop](media/wireframes/ms4-desktop-bals.pdf)
