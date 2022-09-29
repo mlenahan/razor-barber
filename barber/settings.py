@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECRET_KEY = "16@_w+#a8v27#w=_7&d5!r(lxjb)3vvuqjqygmdxm*8&(e0%kn"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+
 
 ALLOWED_HOSTS = ['barber-django-ml.herokuapp.com', 'localhost']
 
