@@ -61,7 +61,7 @@ You can find a link to the business page [here.](https://www.facebook.com/Razor-
     * As a returning site admin I can look at whether any new orders have been placed so that I can fulfill or amend them as required
     * As a returning site admin I can update the blog page content so that any required changes to it are reflected
 
-User stories have also been recorded using GitHub issues and have been placed in the milsetone section under a 'Product Backlog' title. They can be seen [here.](https://github.com/mlenahan/ms-5-django/milestone/1)
+User stories have also been recorded using GitHub issues and have been placed in the milsetone section under a 'Product Backlog' title. They can be seen [here.](https://github.com/mlenahan/razor-barber/milestone/1)
 
 I also used an Iteration Board to help with the planning of this project. That can be seen [here.](https://github.com/users/mlenahan/projects/4)
 
@@ -206,3 +206,90 @@ Barber selection.
 Custom error page.
 
 ![Image of edit product page](media/readme_screenshots/error_page.png)<br>
+
+# Technologies
+
+## Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries and Programs Used
+
+1. [Google Fonts](https://fonts.google.com/)
+2. [Font Awesome](https://fontawesome.com/)
+3. [Git](https://git-scm.com/)
+4. [GitHub](https://github.com/)
+5. [Gitpod](https://www.gitpod.io/)
+6. [Chrome devtools](https://developer.chrome.com/docs/devtools/)
+7. [Heroku](https://dashboard.heroku.com/apps)
+8. [Postgres](https://www.postgresql.org/)
+9. [Django](https://www.djangoproject.com/)
+10. [Autopep8](https://pypi.org/project/autopep8/)
+11. [Django Summernote](https://github.com/summernote/django-summernote)
+
+# Testing
+
+Testing and results can be found [here](TESTING.md)
+
+# Deployment
+
+### Initial deployment
+
+- Gitpod
+    - Create new repository from CI template
+    - Install Django and required dependencies into Gitpod workspace
+    - Create new Django project
+    - Create procfile as required
+    - Run "pip3 freeze --local > requirements.txt" to update requirements file
+- Heroku
+    - Log into Heroku 
+    - Create new app
+    - Add a PostgreSQL "hobby" database as resource
+    - Configure "DISABLE_COLLECTSTATIC = 1" in Config Vars
+- Gitpod
+    - Create env.py file and add database path from Heroku
+    - Add secret key to env.py
+    - Configure database path and secret key in settings.py to be read from environment variables
+    - Perform commit and push to GitHub
+- Heroku 
+    - Under the app, browse to Deploy
+    - Connect to Github, select appropriate repository
+    - Run Deploy
+    - Wait for confirmation that app has deployed
+
+### Final deployment
+
+- Gitpod
+    - Ensure all required files up-to-date and that application is working
+    - Run "pip3 freeze --local > requirements.txt" to update requirements file
+    - Ensure "DEBUG = False" set in settings.py
+    - Perform commit and push to GitHub
+- Heroku
+    - Under the app, browse to Config Vars
+    - Remove the value "DISABLE_COLLECTSTATIC = 1" from Config Vars
+    - Browse to Deploy and run deployment
+    - Wait for confirmation that app has deployed
+
+
+## Fork
+
+- To fork this project, go to my [repository](https://github.com/mlenahan/razor-barber).
+
+- Click the fork option displayed on the top right side of the page.
+
+- The fork should now be in your repositories.
+
+## Clone
+
+- If someone wishes to clone the [repository](https://github.com/mlenahan/razor-barber), they can do so by using this command in their terminal/command line `git clone https://github.com/mlenahan/razor-barber.git`
+
+- To install requirements, the user can use this command in their terminal/command line `pip3 install -r requirements.txt`
+
+# Credits
+
+- Code Institute for walk through project 'Boutique Ado' and their GitPod template.
+
+- StackOverflow for helping me troubleshoot issues I encountered and providing code snippets I could modify to use in my project.
