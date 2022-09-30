@@ -60,3 +60,31 @@
 
 Testing for returning users is covered in the above user story tests.
 
+## Responsiveness
+
+My site is responsive accross all devices as far as I am aware.
+
+- ### Desktop
+
+![image](media/testing_screenshots/desktop_responsive.jpg)
+
+- ### Tablet
+
+![image](media/testing_screenshots/ipad_responsive.png)
+
+- ### Mobile
+
+![image](media/testing_screenshots/iphone_responsive.png)
+
+## Bugs
+
+There are no know bugs on this site.
+
+## Validation
+
+### Python
+
+All files have been checked for flake8 standards. `autopep8 --in-place --aggressive --aggressive <file name>` has been run on all python files in order to ensure the files comply to flake8 rules. Any errors left are left because changing them would break the code.
+
+## HTML
+

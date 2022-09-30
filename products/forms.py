@@ -5,8 +5,7 @@ from .widgets import (
     TimePickerInput,
 )
 from .models import Product
-from datetimewidget.widgets import DateTimeWidget
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 dateTimeOptions = {
@@ -30,17 +29,6 @@ def datetime_range(start, end, delta):
     while current < end:
         yield current
         current += delta
-
-
-# class DateForm(forms.Form):
-
-#     dt = forms.DateTimeField(widget=DateTimeWidget(options=dateTimeOptions))
-# dts = [dt.strftime('%Y-%m-%d T%H:%M Z') for dt in
-#        datetime_range(datetime(2016, 9, 1, 7),
-# datetime(2016, 9, 1, 9+12),
-#        timedelta(minutes=15))]
-
-# print(dts)
 
 
 class DateForm(forms.Form):
