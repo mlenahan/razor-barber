@@ -229,12 +229,15 @@ Custom error page.
 9. [Django](https://www.djangoproject.com/)
 10. [Autopep8](https://pypi.org/project/autopep8/)
 11. [Django Summernote](https://github.com/summernote/django-summernote)
+12. [Stripe](https://stripe.com/)
+13. [Mailchimp](https://mailchimp.com/)
+14. [Django Summernote](https://github.com/summernote/django-summernote)
 
 # Testing
 
 Testing and results can be found [here](TESTING.md)
 
-# Deployment
+## Deployment
 
 ### Initial deployment
 
@@ -246,33 +249,39 @@ Testing and results can be found [here](TESTING.md)
     - Run "pip3 freeze --local > requirements.txt" to update requirements file
 - Heroku
     - Log into Heroku 
-    - Create new app
+    - Create new app 
     - Add a PostgreSQL "hobby" database as resource
     - Configure "DISABLE_COLLECTSTATIC = 1" in Config Vars
+    - Configure "SECRET_KEY" variable in Config Vars
 - Gitpod
     - Create env.py file and add database path from Heroku
     - Add secret key to env.py
     - Configure database path and secret key in settings.py to be read from environment variables
     - Perform commit and push to GitHub
-- Heroku 
-    - Under the app, browse to Deploy
-    - Connect to Github, select appropriate repository
-    - Run Deploy
-    - Wait for confirmation that app has deployed
+- Heroku
+    - Perform deployment on portal, await completion 
 
 ### Final deployment
 
 - Gitpod
     - Ensure all required files up-to-date and that application is working
-    - Run "pip3 freeze --local > requirements.txt" to update requirements file
+    - Run "pip3 freeze > requirements.txt" to update requirements file
     - Ensure "DEBUG = False" set in settings.py
     - Perform commit and push to GitHub
 - Heroku
-    - Under the app, browse to Config Vars
+    - Under settings, go to Config Vars
     - Remove the value "DISABLE_COLLECTSTATIC = 1" from Config Vars
+    - Add new Config Vars entries for the following with appropriate values:
+        - AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY
+        - EMAIL_HOST_PASS
+        - EMAIL_HOST_USER
+        - STRIPE_PUBLIC_KEY
+        - STRIPE_SECRET_KEY
+        - STRIPE_WH_SECRET
+        - USE_AWS 
     - Browse to Deploy and run deployment
     - Wait for confirmation that app has deployed
-
 
 ## Fork
 
