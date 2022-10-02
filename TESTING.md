@@ -78,7 +78,7 @@ My site is responsive accross all devices as far as I am aware.
 
 ## Bugs
 
-There are no know bugs on this site.
+There are no known bugs on this site.
 
 ## Validation
 
