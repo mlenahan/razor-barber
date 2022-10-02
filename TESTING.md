@@ -111,7 +111,9 @@ Some pages contain the warning "Self-closing tag syntax in text/html documents i
 * Blog <br>
 ![image](media/testing_screenshots/blog_html_val.png)
 
-* Blog Detail <br>
+* Blog Detail
+    * The error here is an issue created by Django Summernote which is unfixable.
+<br>
 ![image](media/testing_screenshots/blog_detail_html_val.png)
 
 * Blog Comment Edit <br>
@@ -141,6 +143,8 @@ Some pages contain the warning "Self-closing tag syntax in text/html documents i
 ![image](media/testing_screenshots/profile_css_val.png)
 
 ### JavaScript
+
+All errors are due to JSHint not recognising ES6 syntax.
 
 * Quantity input script <br>
 ![image](media/testing_screenshots/quantity_input_js_val.png)
