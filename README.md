@@ -94,13 +94,19 @@ I also used an Iteration Board to help with the planning of this project. That c
  
  ### Schema
 
-The schema overview for my application is as below:
+Details of the database scheme and it's relationships can be viewed in the image above.
 
-![Image of schema overview](media/readme_screenshots/schema.jpg)<br>
+![Image of schema overview](media/db_schema.png)<br>
 
-As seen above, the Category table has a one-to-many link with Product as one category can contain many products.
-The Order table has a one-to-many link with OrderLineItem, as one order can contain many line items. There is also a one-to-many link between Product and OrderLineItem as the same product can appear in many line items on different orders.<br><br>
-There is a one-to-many relationship between UserProfile and Order as one user can have many orders associated with them. The UserProfile table also has a one-to-one link with the built-in Django User model (shown here for demonstration purposes) as each user can have only one profile linked to them. The BlogPost table has a one-to-many relationship with Reply, which allows for multiple replies to a particular blog post. There is also a one-to-many relationship between the User model and the Reply table as one user may have many replies.<br><br>
+The relationships are as follows:
+
+* Order has a one-to-many relationship with OrderLineItem
+* Product has a one-to-many relationship with OrderLineItem
+* UserProfile  has a one-to-many relationship with Order
+* UserProfile has a one-to-one relationship with django's default User model
+* BlogPost has a one-to-many relationship with the Reply
+* Reply has a one-to-many relationship with the User
+* I have included the non functional Reservation model for potential future use
 
 ### Wireframes
 
@@ -174,7 +180,7 @@ Order details.
 
 ![Image of order history page](media/readme_screenshots/order_history.png)<br>
 
-Blog. A lot of the blog logic was taken from a pervious project I have worked on [Johnpooch.dog.](https://github.com/mlenahan/Johnpooch.dog)
+Blog.
 
 ![Image of blog overview page](media/readme_screenshots/blog.png)<br>
 
@@ -328,3 +334,5 @@ An [Amazon Web Services](https://aws.amazon.com/) S3 bucket has been used to hos
 - Code Institute for walk through project 'Boutique Ado' and their GitPod template.
 
 - StackOverflow for helping me troubleshoot issues I encountered and providing code snippets I could modify to use in my project.
+
+- A lot of the blog logic was taken from a pervious project I have worked on [Johnpooch.dog.](https://github.com/mlenahan/Johnpooch.dog)
