@@ -110,7 +110,7 @@ The relationships are as follows:
 
 ### Wireframes
 
-Wireframes were created on Balsamiq (see links below)
+Wireframes were created on Balsamiq.
 
 * [Mobile](media/wireframes/mobile-wireframe.pdf)
 * [Tablet](media/wireframes/tablet-wireframe.pdf)
