@@ -6,17 +6,29 @@ Razor Barber is a website selling top of the range hair products as well as allo
 
 [Link to deployed site](https://barber-django-ml.herokuapp.com/)
 
+### Making Payments
+
+The website uses [Stripe](https://stripe.com/gb) to process payments. The Stripe account associated with this project is in 'test' mode, so to make payments on the site, one of Stripe's test cards will need to be used, 2 of which are as follows.
+
+4242 4242 4242 4242 - to simulate standard payments
+
+4000 0025 0000 3155 - to simulate 3D Secure authentication payments
+
+Then use any future date and any 3-digit CVC code.
+
 ## Business Model
 
-I have used a B2C buisness model for the site. The reason I chose this is because the products I will be selling are aimed at consumers and not businesses. The product selection and checkout flow allow for quick and easy purchases, which is not something you would use in a B2B environment. 
+The business model for this e-commerce website is a 'B2C – Business to customer' model. None of the products sold are made or developed by Razor Barber, so everything is bought at wholesale prices to sell to customers at a profit. With this in mind, the site has been designed to make everything as easy as possible for customers visiting the site. Everything is designed to be easily found and understood and to produce a positive response from the site's users.
 
 ### Marketing Strategy
 
-* I have made use of the following:
+The marketing strategy for this site uses a combination of Email Marketing, Social Media Marketing and Search Engine Optimisation.
 
-    * Social media advertising, due to it being a no cost option and potentially able to reach many users
-    * Email advertising due to the relative simplicity of creating newsletters or offers for potential and existing customers
-    * SEO and looking to rank well in searches on Google to aid visibility of my application
+Users can subscribe to the site's mailing list by submitting their email addresses via a simple MailChimp form in the site's footer.
+
+#### Search Engine Optimisation
+
+To optimise how search engines will view this site, a number of short-tail and long-tail keywords are needed. After some research using Google's 'People always ask' and 'Related Searches' features, a list of 10-20 short-tail and long-tail keywords were discovered and have been placed in the keywords meta tag within the head of the main HTML document.
 
 ### Facebook Business Page
 
