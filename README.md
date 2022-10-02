@@ -297,6 +297,11 @@ Testing and results can be found [here](TESTING.md)
 
 - To install requirements, the user can use this command in their terminal/command line `pip3 install -r requirements.txt`
 
+## Media
+
+- All media for product images belong to [Ruger Barber](https://www.rugerbarber.com/)
+- Homepage image and images used in Blog are taken from a Google Image Search
+
 # Credits
 
 - Code Institute for walk through project 'Boutique Ado' and their GitPod template.
