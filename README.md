@@ -232,12 +232,21 @@ Custom error page.
 12. [Stripe](https://stripe.com/)
 13. [Mailchimp](https://mailchimp.com/)
 14. [Django Summernote](https://github.com/summernote/django-summernote)
+15. [AWS](https://aws.amazon.com/)
 
 # Testing
 
 Testing and results can be found [here](TESTING.md)
 
 ## Deployment
+
+### Amazon Web Services (AWS)
+
+An [Amazon Web Services](https://aws.amazon.com/) S3 bucket has been used to host all static and media files for this website. A user, user group and bucket were created with appropriate names and with public access set to enabled. The ACCESS and SECRET keys provided were then used as environment variables within the project.
+
+### Stripe
+
+[Stripe](https://stripe.com/gb) was used for processing payments on the site, including the use of Stripe webhooks. After setting up an account and an appropriate webhook endpoint, the PUBLIC, SECRET and webhook SECRET keys provided were then used as environment variables within the project.
 
 ### Initial deployment
 
