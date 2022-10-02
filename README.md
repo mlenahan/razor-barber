@@ -174,7 +174,7 @@ Order details.
 
 ![Image of order history page](media/readme_screenshots/order_history.png)<br>
 
-Blog overview.
+Blog. A lot of the blog logic was taken from a pervious project I have worked on [Johnpooch.dog.](https://github.com/mlenahan/Johnpooch.dog)
 
 ![Image of blog overview page](media/readme_screenshots/blog.png)<br>
 
