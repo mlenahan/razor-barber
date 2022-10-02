@@ -88,3 +88,68 @@ All files have been checked for flake8 standards. `autopep8 --in-place --aggress
 
 ### HTML
 
+Some pages contain the warning "Self-closing tag syntax in text/html documents is widely discouraged; it’s unnecessary and interacts badly with other HTML features (e.g., unquoted attribute values). If you’re using a tool that injects self-closing tag syntax into all void elements, without any option to prevent it from doing so, then consider switching to a different tool.". The warning is saying that `<input>` tags shouldn't have a closing tag. I have searched my codebase for the lines of code they refer to but these lines aren't present so I am unsure on how to get rid of this warning.
+
+* Home <br>
+![image](media/testing_screenshots/home_html_val.png)
+
+* Products <br>
+![image](media/testing_screenshots/products_html_val.png)
+
+* Product Detail <br>
+![image](media/testing_screenshots/product_detail_html_val.png)
+
+* Bag <br>
+![image](media/testing_screenshots/bag_html_val.png)
+
+* Checkout <br>
+![image](media/testing_screenshots/checkout_html_val.png)
+
+* Checkout Success <br>
+![image](media/testing_screenshots/checkout_success_html_val.png)
+
+* Blog <br>
+![image](media/testing_screenshots/blog_html_val.png)
+
+* Blog Detail <br>
+![image](media/testing_screenshots/blog_detail_html_val.png)
+
+* Blog Comment Edit <br>
+![image](media/testing_screenshots/blog_edit_html_val.png)
+
+* Blog Comment Delete <br>
+![image](media/testing_screenshots/blog_comment_delete_html_val.png)
+
+* Contact Us <br>
+![image](media/testing_screenshots/contact_html_val.png)
+
+* Product Add <br>
+![image](media/testing_screenshots/product_add_html_val.png)
+
+* Product Edit <br>
+![image](media/testing_screenshots/product_edit_html_val.png)
+
+### CSS
+
+* base.css
+![image](media/testing_screenshots/base_css_val.png)
+
+* checkout.css
+![image](media/testing_screenshots/checkout_css_val.png)
+
+* profile.css
+![image](media/testing_screenshots/profile_css_val.png)
+
+### JavaScript
+
+* Quantity input script <br>
+![image](media/testing_screenshots/quantity_input_js_val.png)
+
+* Sort selection script <br>
+![image](media/testing_screenshots/)
+
+* stripe-elements.js <br>
+![image](media/testing_screenshots/stripe_element_js_val.png)
+
+* update-remove.js <br>
+![image](media/testing_screenshots/base_html_script.png)

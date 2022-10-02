@@ -27,7 +27,7 @@
             <p class="font-italic">{{ reply.body }}</p>
             <div class="text-right mt-5">                
                 <a href="{% url 'blog_detail' post.id %}" class="btn btn-outline-black rounded-0">Cancel</a>
-                <a href="{% url 'blog_reply_delete' reply.id %}" class="btn btn-red text-white rounded-0">Delete</a>                
+                <a href="{% url 'blog_reply_delete' reply.id %}" class="btn btn-warning text-black rounded-0">Delete</a>                
             </div>
         </div>
     </div>
