@@ -145,9 +145,6 @@ Some pages contain the warning "Self-closing tag syntax in text/html documents i
 * Quantity input script <br>
 ![image](media/testing_screenshots/quantity_input_js_val.png)
 
-* Sort selection script <br>
-![image](media/testing_screenshots/)
-
 * stripe-elements.js <br>
 ![image](media/testing_screenshots/stripe_element_js_val.png)
 
